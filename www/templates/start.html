@@ -1,0 +1,72 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">{{operation}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content ng-show="!isRegister">
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username" value="admin"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password" value="admin" />
+        </label>
+		<label class="item item-input">
+          <span class="input-label">IP Address</span>
+          <input type="text" ng-model="loginData.ip" value="127.0.0.1" />
+        </label>
+		<label class="item item-input">
+          <span class="input-label">Port</span>
+          <input type="text"  ng-model="loginData.port" value="4321"/>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Sign In</button>
+		</label>
+	</form>
+	<form ng-submit="showRegister();">
+	<label class="item">
+		  <button class="button button-block button-positive" type="submit">Sign Up</button>
+	</label>	
+	 </div>
+    </form>
+  </ion-content>
+	<ion-content ng-show="isRegister">
+	<form ng-submit="doRegister()">
+	  <div class="list">
+		<label class="item item-input">
+		  <span class="input-label">Username</span>
+		  <input type="text" ng-model="registerData.username"/>
+		</label>
+		<label class="item item-input">
+		  <span class="input-label">Password</span>
+		  <input type="password" ng-model="registerData.password"  />
+		</label>
+		<label class="item item-input">
+		  <span class="input-label">Email</span>
+		  <input type="text" ng-model="registerData.email" />
+		</label>
+		<label class="item item-input">
+		  <span class="input-label">ip</span>
+		  <input type="text" ng-model="registerData.ip" />
+		</label>
+			<label class="item item-input">
+		  <span class="input-label">port</span>
+		  <input type="text" ng-model="registerData.port" />
+			</label>
+		<label class="item">
+		  <button class="button button-block button-positive" type="submit">Sign Up</button>
+		</label>
+		</form>
+	<form ng-submit="showLogin()">
+		<label class="item">
+		  <button class="button button-block button-positive" type="submit">Sign In</button>
+		</label>	
+	 </div>
+    </form>
+	</ion-content>
+</ion-modal-view>

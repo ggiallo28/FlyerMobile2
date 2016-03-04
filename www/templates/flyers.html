@@ -1,0 +1,14 @@
+<ion-view view-title="Volantini Supermercato">
+  <ion-content  class="has-header">
+      <ion-list>
+        <ion-item class = "fixed-item-dim" ng-repeat="item in items"> 
+        <ion-item class="item-avatar item-button-right no-border " ng-click="selectFlyer('{{item.ID_volantino}}')" on-hold="showPDF('{{item.ID_volantino}}')">
+		<img src="{{item.Anteprima}} " /></div>
+		<h2>{{item.Data_Inizio}} {{item.Data_Fine}}</h2>
+		<p>{{item.Note}}</p></div>
+		</ion-item>	
+	</ion-item>
+      </ion-list>    
+      <ion-infinite-scroll ng-if="!isStarred" on-infinite="loadMore()" distance="5%"></ion-infinite-scroll> 
+    </ion-content>
+</ion-view>

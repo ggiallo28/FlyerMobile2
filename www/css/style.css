@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+.no-border {
+	border: 0px;
+}
+
+.fixed-item-dim { 
+	height: 100px; 	
+}
+
+.fl { float: left;}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}

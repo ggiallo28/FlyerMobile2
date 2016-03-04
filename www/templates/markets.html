@@ -1,0 +1,17 @@
+<ion-view view-title="Lista Supermercati">	
+  <ion-content  class="has-header" ng-show="!isEmpty">
+      <ion-list>
+	  <ion-item class = "fixed-item-dim" ng-repeat="item in items"> 
+        <ion-item class="item-avatar item-button-right no-border " ng-click="selectMarket('{{item.ID_supermercato}}')">
+		<img src="{{item.Logo}} " />
+		<h2>{{item.Nome}} {{item.Citta}}</h2>
+		<p>{{item.Via}} {{item.CAP}}</p>
+		</ion-item>	
+	  </ion-item>	
+      </ion-list>    
+      <ion-infinite-scroll ng-if="!isStarred" on-infinite="loadMore()" distance="5%"></ion-infinite-scroll> 
+    </ion-content>
+	<ion-content ng-show="isEmpty">
+    <img class="center" src="img/empty-cart.jpg" ng-if="isEmpty" style="max-width: 80%"/>
+	</ion-content>
+</ion-view>
