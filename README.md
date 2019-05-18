@@ -1,4 +1,4 @@
-# Embedded System Alarm Project
+# Microservices Flyer Project
 
 The project was carried out as part of the Microservices exam at the University of Salerno.
 
